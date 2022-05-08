@@ -18,6 +18,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import br.com.cursonelio.projspring.entity.enums.OrderStatus;
 
@@ -36,6 +37,7 @@ public class Order implements Serializable{
 //	Enum
 	private Integer orderStatus;
 	
+	@JsonIgnore
 //	Associando esse atributo para a classe User, e passando a relação de muitos pedidos para um usuario
 	@ManyToOne
 //	Passando a coluna chave estrangeira na tabela User e o nome;
